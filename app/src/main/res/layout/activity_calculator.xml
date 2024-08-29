@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".CalculatorActivity">
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TableRow>
+            <TextView
+                android:id="@+id/ac"
+                android:layout_height="70dp"
+                android:layout_width="match_parent"
+                style="@style/Number"
+                android:textColor="@color/blue"
+                android:text = "AC" />
+
+            <TextView
+                android:id="@+id/modulo"
+                android:layout_height="70dp"
+                android:layout_width="match_parent"
+                style="@style/Number"
+                android:text = "%" />
+
+
+            <ImageView
+                android:id="@+id/backSpace"
+                android:layout_height="70dp"
+                android:layout_width="match_parent"
+                style="@style/Number"
+                android:src="@drawable/backspace_icon"
+                android:scaleType="center"
+                 />
+
+            <TextView
+                android:id="@+id/plus"
+                android:layout_height="70dp"
+                android:layout_width="match_parent"
+                style="@style/Number"
+                android:textSize="25sp"
+                android:textColor="@color/blue"
+                android:text = "+" />
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/sevenForThala"
+                android:layout_height="70dp"
+            android:layout_width="match_parent"
+            style="@style/Number"
+            android:text = "7" />
+
+            <TextView
+                android:id="@+id/eight"
+                android:layout_height="70dp"
+                android:layout_width="match_parent"
+                style="@style/Number"
+                android:text = "8" />
+
+            <TextView
+                android:id="@+id/nine"
+                android:layout_height="70dp"
+                android:layout_width="match_parent"
+                style="@style/Number"
+                android:text = "9" />
+
+            <TextView
+                android:id="@+id/minus"
+                android:layout_height="70dp"
+                android:layout_width="match_parent"
+                style="@style/Number"
+                android:textSize="27sp"
+                android:textColor="@color/blue"
+                android:text = "-" />
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/four"
+                android:layout_height="70dp"
+                android:layout_width="match_parent"
+                style="@style/Number"
+                android:text = "4" />
+
+            <TextView
+                android:id="@+id/five"
+                android:layout_height="70dp"
+                android:layout_width="match_parent"
+                style="@style/Number"
+                android:text = "5" />
+
+            <TextView
+                android:id="@+id/six"
+                android:layout_height="70dp"
+                android:layout_width="match_parent"
+                style="@style/Number"
+                android:text = "6" />
+
+            <TextView
+                android:id="@+id/multiply"
+                android:layout_height="70dp"
+                android:layout_width="match_parent"
+                style="@style/Number"
+                android:textSize="25sp"
+                android:textColor="@color/blue"
+                android:text = "x" />
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/one"
+                android:layout_height="70dp"
+                android:layout_width="match_parent"
+                style="@style/Number"
+                android:text = "1" />
+
+            <TextView
+                android:id="@+id/two"
+                android:layout_height="70dp"
+                android:layout_width="match_parent"
+                style="@style/Number"
+                android:text = "2" />
+
+            <TextView
+                android:id="@+id/three"
+                android:layout_height="70dp"
+                android:layout_width="match_parent"
+                style="@style/Number"
+                android:text = "3" />
+
+            <TextView
+                android:id="@+id/divide"
+                android:layout_height="70dp"
+                android:layout_width="match_parent"
+                style="@style/Number"
+                android:textColor="@color/blue"
+                android:textSize="25sp"
+                android:text = "&#247;" />
+
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/doubleZero"
+                android:layout_height="70dp"
+                android:layout_width="match_parent"
+                style="@style/Number"
+                android:text = "00" />
+
+            <TextView
+                android:id="@+id/zero"
+                android:layout_height="70dp"
+                android:layout_width="match_parent"
+                style="@style/Number"
+                android:text = "0" />
+
+            <TextView
+                android:id="@+id/decimal"
+                android:layout_height="70dp"
+                android:layout_width="match_parent"
+                style="@style/Number"
+                android:text = "." />
+
+            <TextView
+                android:id="@+id/equalTo"
+                android:layout_height="70dp"
+                android:layout_width="match_parent"
+                style="@style/Number"
+                android:textColor="@color/blue"
+                android:textSize="25sp"
+                android:text = "=" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/expression"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/result"
+        app:layout_constraintVertical_bias="0"/>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_marginBottom="56dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@id/tableLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        android:textColorHint="@color/orenge"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
