@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.core.content.ContextCompat
 import net.objecthunter.exp4j.ExpressionBuilder
 import java.math.BigDecimal
@@ -64,6 +65,12 @@ class CalculatorActivity : AppCompatActivity() {
         ac = findViewById(R.id.ac)
         result = findViewById(R.id.result)
         expression = findViewById(R.id.expression)
+
+        var aboutTextview = findViewById<ImageView>(R.id.aboutTextview)
+
+        aboutTextview.setOnClickListener {
+            Toast.makeText(this, "Developed by PG Studio" ,Toast.LENGTH_SHORT).show()
+        }
 
         one.setOnClickListener {
             appendText("1", true)
